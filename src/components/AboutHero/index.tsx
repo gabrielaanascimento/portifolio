@@ -2,26 +2,26 @@ import React from 'react'
 
 const AboutHero = () => {
   return (
-    <section style={{ textAlign: "center", marginBottom: "60px" }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "6px 12px", border: "1px solid #e4e4e7", borderRadius: "20px", background: "rgba(255,255,255,0.7)", boxShadow: "0 1px 3px rgba(0,0,0,0.1)", marginBottom: "20px" }}>
-            <span style={{ fontSize: "14px", fontWeight: 500 }}>Sobre mim</span>
+    <section className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-zinc-200 rounded-full bg-white bg-opacity-70 shadow-sm mb-5">
+            <span className="text-sm font-medium">Sobre mim</span>
           </div>
 
-          <div style={{ width: "100px", height: "100px", borderRadius: "50%", overflow: "hidden", margin: "0 auto 20px", display: "flex", alignItems: "center", justifyContent: "center", background: "linear-gradient(to bottom right, #6366f1, #393d42)", color: "white", fontSize: "32px", fontWeight: "bold" }}>
+          <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-indigo-500 to-zinc-800 text-white text-3xl font-bold">
             GA
           </div>
 
-          <h1 style={{ fontSize: "32px", fontWeight: 600, marginBottom: "12px", color: '#fff' }}>Gabriel Augusto</h1>
-          <p style={{ maxWidth: "600px", margin: "0 auto 24px", color: "#52525b" }}>
+          <h1 className="text-3xl md:text-4xl font-semibold mb-3 text-white">Gabriel Augusto</h1>
+          <p className="max-w-xl mx-auto mb-6 text-zinc-500">
             Desenvolvedor Full-Stack focado em criar experiências digitais rápidas, acessíveis e com belo design. Amo transformar ideias em produtos que geram impacto real.
           </p>
 
-          <div style={{ display: "flex", justifyContent: "center", gap: "12px" }}>
-            <a href="https://github.com/gabrielaanascimento" target="_blank"  style={{ padding: "8px 16px", border: "1px solid #e4e4e7", borderRadius: "20px", textDecoration: "none", color: "#fff" }}>GitHub</a>
-            <a href="#" target="_blank" style={{ padding: "8px 16px", border: "1px solid #e4e4e7", borderRadius: "20px", textDecoration: "none", color: "#fff" }}>LinkedIn</a>
-            <a href="mailto:gabrielaugustoassisnascimento@gmail.com" target="_blank" style={{ padding: "8px 16px", border: "1px solid #e4e4e7", borderRadius: "20px", textDecoration: "none", color: "#fff" }}>Contato</a>
+          <div className="flex justify-center gap-3">
+            <a href="https://github.com/gabrielaanascimento" target="_blank" className="px-4 py-2 border border-zinc-200 rounded-full text-white no-underline hover:bg-zinc-800 transition-colors">GitHub</a>
+            <a href="#" target="_blank" className="px-4 py-2 border border-zinc-200 rounded-full text-white no-underline hover:bg-zinc-800 transition-colors">LinkedIn</a>
+            <a href="mailto:gabrielaugustoassisnascimento@gmail.com" target="_blank" className="px-4 py-2 border border-zinc-200 rounded-full text-white no-underline hover:bg-zinc-800 transition-colors">Contato</a>
           </div>
-        </section>
+    </section>
   )
 }
 

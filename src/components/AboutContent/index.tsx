@@ -2,12 +2,12 @@ import React from 'react'
 
 const AboutContent = () => {
   return (
-    <section style={{ marginBottom: "60px" }}>
-          <h2 style={{ fontSize: "24px", fontWeight: 600, marginBottom: "16px", color: '#fff' }}>Quem eu sou</h2>
-          <p style={{ color: "#52525b", marginBottom: "12px" }}>
+    <section className="mb-12">
+          <h2 className="text-xl md:text-2xl font-semibold mb-4 text-white">Quem eu sou</h2>
+          <p className="text-zinc-500 mb-3">
             Trabalho com desenvolvimento web criando interfaces reativas e APIs escaláveis. Meu foco está em soluções simples e elegantes, com atenção especial a performance, acessibilidade e UX.
           </p>
-          <p style={{ color: "#52525b" }}>
+          <p className="text-zinc-500">
             Fora do código, gosto de compartilhar conhecimento em comunidades, escrever artigos e colaborar com projetos open source.
           </p>
     </section>

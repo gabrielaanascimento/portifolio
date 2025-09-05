@@ -9,27 +9,11 @@ interface PropsCardSkills {
 
 const CardSkills = ({image, title, text, route}: PropsCardSkills) => {
   return (
-    <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        width: "25%",
-        height: "100%"
-    }}>
-        <img src={image} alt={title} style={{
-            width: '100%',
-            height: '200px'
-        }} />
-        <h2 style={{
-            fontSize: '16px',
-            fontWeight: 'bold'
-        }}>{title}</h2>
-        <p style={{
-            color: '#9fa3a9',
-        }}>{text}</p>
-        <a href={route} style={{
-            color: '#000FFF',
-            fontWeight: 700
-        }}>Ver mais 🠒</a>
+    <div className="flex flex-col w-full h-full p-4 bg-zinc-900 rounded-lg shadow-lg">
+        <img src={image} alt={title} className="w-full h-48 md:h-56 object-cover rounded-md mb-4" />
+        <h2 className="text-lg md:text-xl font-bold text-white mb-2">{title}</h2>
+        <p className="text-zinc-400 text-sm mb-4 flex-grow">{text}</p>
+        <a href={`/projects${route}`} className="text-sky-400 font-bold hover:underline">Ver mais 🠒</a>
     </div>
   )
 }

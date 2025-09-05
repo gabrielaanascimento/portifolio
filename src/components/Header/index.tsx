@@ -5,35 +5,15 @@ import AboutResume from '../AboutResume'
 const Header = () => {
   return (
     <div
-      style={{
-        width: '100vw',
-        height: '400px',
-        backgroundImage: "url('/header-bg.png')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backdropFilter: 'blur(10px)',
-        display: 'flex',
-        flexDirection: 'column'
-      }}
+      className="w-full h-96 md:h-[400px] bg-cover bg-center backdrop-blur-md flex flex-col items-center relative gap-3"
+      style={{ backgroundImage: "url('/header-bg.png')" }}
     >
-      <div style={{
-        width: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
+      <div className="w-full flex justify-center items-center pt-5">
         <NavBar />
       </div>
-      <div style={{
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: '14rem'
-      }}>
+      <div className="w-full flex justify-center mt-auto md:mt-12 mb-20">
         <AboutResume />
       </div>
-
     </div>
   )
 }
