@@ -2,6 +2,6 @@
 import api from './api';
 
 export async function deleteProject(id: string) {
-  const response = await api.delete(`/projects/${id}`);
+  const response = await api.delete(`/api/projects/${id}`);
   return response.data;
 }
