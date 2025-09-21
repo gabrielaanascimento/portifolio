@@ -38,7 +38,7 @@ export default function ProjectsByCategory() {
     <div style={{ minHeight: "100vh", color: "#18181b", padding: "40px" }}>
       <main style={{ maxWidth: "1000px", margin: "0 auto" }}>
         <section style={{ textAlign: "center", marginBottom: "60px" }}>
-          <h1 style={{ fontSize: "32px", fontWeight: 600, marginBottom: "12px", color: "#fff" }}>
+          <h1 style={{ fontSize: "32px", fontWeight: 600, marginBottom: "12px", color: "#00000" }}>
             Projetos de {categoria}
           </h1>
         </section>
@@ -52,7 +52,7 @@ export default function ProjectsByCategory() {
             }}
           >
             {lista.map((proj, i) => (
-              <div key={proj.id} style={{ border: "1px solid #e4e4e7", borderRadius: "12px", background: "#1f2124", overflow: "hidden", display: "flex", flexDirection: "column", justifyContent: "space-between", boxShadow: "0 1px 3px rgba(0,0,0,0.05)" }}>
+              <div key={proj.id} style={{ border: "1px solid #e4e4e7", borderRadius: "12px", background: "#fff", overflow: "hidden", display: "flex", flexDirection: "column", justifyContent: "space-between", boxShadow: "0 1px 3px rgba(0,0,0,0.05)" }}>
               <img src={proj.image_url} alt={proj.title} style={{ width: "100%", height: "160px", objectFit: "cover" }} />
               <div style={{ padding: "20px", flexGrow: 1, display: "flex", flexDirection: "column" }}>
                 <h3 style={{ fontSize: "20px", fontWeight: 600, marginBottom: "8px", color: '#fff' }}>{proj.title}</h3>
@@ -62,7 +62,7 @@ export default function ProjectsByCategory() {
                     <span key={t} style={{ fontSize: "12px", padding: "4px 10px", borderRadius: "20px", border: "1px solid #e4e4e7", background: "#f9fafb", color: "#3f3f46" }}>{t}</span>
                   ))}
                 </div>
-                <a href={proj.link} target='_blank' style={{ padding: "8px 14px", borderRadius: "20px", background: "#61dafb", color: "white", textDecoration: "none", textAlign: "center", fontSize: "14px", fontWeight: 500, marginTop: "auto" }}>Ver Projeto</a>
+                <a href={proj.link} target='_blank' style={{ padding: "8px 14px", borderRadius: "20px", background: "black", color: "white", textDecoration: "none", textAlign: "center", fontSize: "14px", fontWeight: 500, marginTop: "auto" }}>Ver Projeto</a>
               </div>
             </div>
             ))}

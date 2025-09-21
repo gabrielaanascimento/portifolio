@@ -1,0 +1,47 @@
+
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.image-profile {
+    border-radius: 20px;
+    width: 300px;
+    height: 420px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    padding: .5rem;
+}
+
+.image {
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 3rem;
+    padding: 1rem;
+}
+
+.button {
+    width: 150px;
+    font-size: 1rem;
+}
+
+.terminal {
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal code {
+    display: flex;
+    flex-direction: column;
+}

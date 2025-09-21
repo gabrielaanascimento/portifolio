@@ -51,7 +51,7 @@ export default function ContactPage() {
           >
             <span style={{ fontSize: "14px", fontWeight: 500 }}>Contato</span>
           </div>
-          <h1 style={{ fontSize: "32px", fontWeight: 600, marginBottom: "12px", color: '#fff' }}>
+          <h1 style={{ fontSize: "32px", fontWeight: 600, marginBottom: "12px", color: 'black' }}>
             Vamos conversar?
           </h1>
           <p style={{ maxWidth: "600px", margin: "0 auto", color: "#52525b" }}>
@@ -81,7 +81,7 @@ export default function ContactPage() {
               boxShadow: "0 1px 3px rgba(0,0,0,0.05)",
             }}
           >
-            <Mail size={22} color="#6366f1" />
+            <Mail size={22} color="gray" />
             <div>
               <h3 style={{ fontSize: "16px", fontWeight: 600 }}>Email</h3>
               <a
@@ -113,7 +113,7 @@ export default function ContactPage() {
               boxShadow: "0 1px 3px rgba(0,0,0,0.05)",
             }}
           >
-            <Phone size={22} color="#6366f1" />
+            <Phone size={22} color="gray" />
             <div>
               <h3 style={{ fontSize: "16px", fontWeight: 600 }}>Telefone</h3>
               <a
@@ -141,7 +141,7 @@ export default function ContactPage() {
               boxShadow: "0 1px 3px rgba(0,0,0,0.05)",
             }}
           >
-            <MapPin size={22} color="#6366f1" />
+            <MapPin size={22} color="gray" />
             <div>
               <h3 style={{ fontSize: "16px", fontWeight: 600 }}>Localização</h3>
               <p style={{ fontSize: "14px", color: "#52525b" }}>
@@ -162,7 +162,7 @@ export default function ContactPage() {
               boxShadow: "0 1px 3px rgba(0,0,0,0.05)",
             }}
           >
-            <Linkedin size={22} color="#6366f1" />
+            <Linkedin size={22} color="gray" />
             <div>
               <h3 style={{ fontSize: "16px", fontWeight: 600 }}>Linkedin</h3>
               <a style={{ fontSize: "14px", color: "#52525b", textDecoration: "none" }} href={aboutData?.linkedin_link} target="_blank" rel="noopener noreferrer">
@@ -222,7 +222,7 @@ export default function ContactPage() {
               style={{
                 padding: "12px 20px",
                 borderRadius: "8px",
-                background: "#6366f1",
+                background: "gray",
                 color: "white",
                 border: "none",
                 fontWeight: 500,

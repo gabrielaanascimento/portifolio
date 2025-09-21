@@ -1,19 +1,28 @@
 import React from 'react'
-
+import './styles.css'
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 const NavBar = () => {
-    return (
-        <div className="w-[95%] lg:w-1/2 py-4 flex items-center justify-center bg-zinc-800 rounded-lg z-50">
-            <ul className="list-none flex justify-center items-center gap-8 lg:gap-20 text-white text-xl font-bold p-0 m-0">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/about">Sobre</a></li>
-                <li><a href="/projects">Projetos</a></li>
-                <li><a href="/login">Login</a></li> 
-                <li className="bg-sky-400 px-5 py-2.5 rounded-md text-zinc-800 font-bold">
-                    <a href='/contact'>Contato</a>
-                </li>                   
-            </ul>
-        </div>
-    )
+  return (
+    <div>
+      <nav className="navbar">
+        <div className="navbar-logo"><img src="/logo.png" alt="logo" className='w-20 h-20' /></div>
+        <ul className="navbar-links">
+          <li><a href="/">Início</a></li>
+          <li><a href="/about">Sobre</a></li>
+          <li><a href="/projects">Projetos</a></li>
+          <li><a href="/login">Login</a></li>
+
+          <li><a href="/contact">
+            <ShimmerButton className="shadow-2xl">
+              <span >
+                Contato
+              </span>
+            </ShimmerButton>
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+  )
 }
 
 export default NavBar
