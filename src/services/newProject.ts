@@ -11,7 +11,7 @@ export interface ProjectData {
 
 export const createProject = async (projectData: ProjectData) => {
   try {
-    const { data } = await api.post("/projects", projectData);
+    const { data } = await api.post("/api/projects", projectData);
     return data;
   } catch (error) {
     console.error("Failed to create project:", error);
