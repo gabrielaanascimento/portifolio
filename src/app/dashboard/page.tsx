@@ -17,6 +17,10 @@ const DashboardPage = () => {
     );
   }
 
+  if (status === 'unauthenticated') {
+    router.push('/login');
+    return null;
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-zinc-900 text-white">

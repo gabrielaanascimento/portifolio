@@ -32,9 +32,10 @@ const ProjectForm: React.FC = () => {
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
+        if (!e.target.files?.length) return; // sai se não tiver arquivo
       setFormData((prevData) => ({
         ...prevData,
-        image: e.target.files[0],
+        image: e.target.files![0],
       }));
     }
   };
