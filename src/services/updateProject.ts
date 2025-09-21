@@ -13,7 +13,7 @@ export interface ProjectUpdateData {
 
 export async function updateProject(id: string, data: ProjectUpdateData) {
   try {
-    const response = await api.put(`/projects/${id}`, data);
+    const response = await api.put(`/api/projects/${id}`, data);
     return response.data;
   } catch (error) {
     throw new Error('Failed to update project');
