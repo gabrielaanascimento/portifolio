@@ -1,7 +1,30 @@
-import React from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+"use client";
+import React, { useEffect } from "react";
+import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { getAbout } from "@/services/about";
+
+type AboutData = {
+  full_name: string;
+  email: string;
+  github_link: string;
+  linkedin_link: string;
+  bio: string;
+  phone: string;
+  location: string;
+};
 
 export default function ContactPage() {
+
+  const [aboutData, setAboutData] = React.useState<AboutData | null>(null);
+  useEffect(() => {
+
+    const fetchEmail = async () => {  
+      const email = await getAbout()
+      setAboutData(email);
+    }
+    fetchEmail();
+    }, [])
+
   return (
     <div
       style={{
@@ -42,7 +65,7 @@ export default function ContactPage() {
           style={{
             display: "grid",
             gap: "20px",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
             marginBottom: "60px",
           }}
         >
@@ -62,7 +85,7 @@ export default function ContactPage() {
             <div>
               <h3 style={{ fontSize: "16px", fontWeight: 600 }}>Email</h3>
               <a
-                href="mailto:gabrielaugustoassisnascimento@gmail.com"
+                href={`mailto:${aboutData?.email}`}
                 style={{
                   fontSize: "14px",
                   color: "#52525b",
@@ -71,7 +94,9 @@ export default function ContactPage() {
 
                 }}
               >
-                gabrielaugustoassis<br/>nascimento@gmail.com
+                <p style={{
+                  flexWrap: 'wrap'
+                }}>{aboutData?.email}</p>
               </a>
             </div>
           </div>
@@ -99,7 +124,7 @@ export default function ContactPage() {
                   textDecoration: "none",
                 }}
               >
-                +55 (11) 95281-2474
+                {aboutData?.phone}
               </a>
             </div>
           </div>
@@ -120,8 +145,29 @@ export default function ContactPage() {
             <div>
               <h3 style={{ fontSize: "16px", fontWeight: 600 }}>Localização</h3>
               <p style={{ fontSize: "14px", color: "#52525b" }}>
-                Poá - SP
+                {aboutData?.location}
               </p>
+            </div>
+          </div>
+
+          <div
+            style={{
+              border: "1px solid #e4e4e7",
+              borderRadius: "12px",
+              background: "white",
+              padding: "20px",
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              boxShadow: "0 1px 3px rgba(0,0,0,0.05)",
+            }}
+          >
+            <Linkedin size={22} color="#6366f1" />
+            <div>
+              <h3 style={{ fontSize: "16px", fontWeight: 600 }}>Linkedin</h3>
+              <a style={{ fontSize: "14px", color: "#52525b", textDecoration: "none" }} href={aboutData?.linkedin_link} target="_blank" rel="noopener noreferrer">
+                {aboutData?.linkedin_link}
+              </a>
             </div>
           </div>
         </section>
@@ -139,7 +185,7 @@ export default function ContactPage() {
           <h2 style={{ fontSize: "20px", fontWeight: 600, marginBottom: "20px" }}>
             Envie uma mensagem
           </h2>
-          <form style={{ display: "grid", gap: "16px" }}>
+          <form style={{ display: "grid", gap: "16px" }} action={`https://formsubmit.co/${aboutData?.email}`} method="POST">
             <input
               type="text"
               placeholder="Seu nome"
