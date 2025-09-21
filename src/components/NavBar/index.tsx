@@ -7,9 +7,10 @@ const NavBar = () => {
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/about">Sobre</a></li>
                 <li><a href="/projects">Projetos</a></li>
+                <li><a href="/login">Login</a></li> 
                 <li className="bg-sky-400 px-5 py-2.5 rounded-md text-zinc-800 font-bold">
                     <a href='/contact'>Contato</a>
-                </li>
+                </li>                   
             </ul>
         </div>
     )

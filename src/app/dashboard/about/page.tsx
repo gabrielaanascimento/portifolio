@@ -1,10 +1,11 @@
-// pages/projects/index.tsx
-"use client";
-import ProjectsList from '@/components/ProjectsList';
+// src/app/dashboard/about/page.tsx
+'use client';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+import UpdateAboutForm from "@/components/UpdateAboutForm";
+import React from "react";
 
-const ProjectsPage = () => {
+const AboutPageDashboard = () => {
   const { status } = useSession();
   const router = useRouter();
 
@@ -16,9 +17,16 @@ const ProjectsPage = () => {
     );
   }
 
-  
+  if (status === 'unauthenticated') {
+    router.push('/login');
+    return null;
+  }
 
-  return <ProjectsList />;
+  return (
+    <div>
+      <UpdateAboutForm />
+    </div>
+  );
 };
 
-export default ProjectsPage;
+export default AboutPageDashboard;

@@ -2,6 +2,6 @@
 import api from './api';
 
 export async function getProjectById(id: string) {
-  const response = await api.get(`/projects/${id}`);
+  const response = await api.get(`/api/projects/${id}`);
   return response.data;
 }

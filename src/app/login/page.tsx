@@ -22,7 +22,7 @@ const Login = () => {
     if (result?.error) {
       setError('Credenciais inválidas. Tente novamente.');
     } else if (result?.ok) {
-      window.location.href = '/dashboard/projects';
+      window.location.href = '/dashboard';
     }
   };
 
