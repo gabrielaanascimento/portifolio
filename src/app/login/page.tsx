@@ -2,7 +2,7 @@
 "use client";
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
-import { useRouter } from 'next/router';
+import { Particles } from '@/components/ui/particles';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -28,7 +28,7 @@ const Login = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen p-4">
-      <div className="bg-gray-500 p-8 rounded-lg shadow-md w-full max-w-sm">
+      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-sm">
         <h2 className="text-2xl font-bold mb-6 text-gray-900 text-center">Login</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -39,7 +39,7 @@ const Login = () => {
               name="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-gray-300"
               required
             />
           </div>
@@ -51,7 +51,7 @@ const Login = () => {
               name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-gray-300"
               required
             />
           </div>
@@ -59,13 +59,21 @@ const Login = () => {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-blue-600 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300"
+              className="bg-gray-600 text-white font-bold py-2 px-4 rounded-md hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300"
             >
               Entrar
             </button>
           </div>
         </form>
       </div>
+      <div className='particles-grid-container'>
+              <Particles
+                quantity={200}
+                ease={80}
+                color={"#000000"}
+                refresh
+              />
+            </div>
     </div>
   );
 };
