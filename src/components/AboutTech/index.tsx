@@ -23,7 +23,8 @@ const slugs = [
   "gitlab",
   "visualstudiocode",
   "figma",
-  "php"
+  "php",
+  "python"
 ];
 
 const AboutTech = () => {
@@ -44,8 +45,8 @@ const AboutTech = () => {
 
   return (
     <section className="mb-12">
-      <h2 className="text-xl md:text-2xl font-semibold mb-4 text-black">Tecnologias</h2>
-      <div className="flex flex-wrap gap-2">
+      <h2 className="text-xl md:text-2xl font-semibold text-black">Tecnologias</h2>
+      <div className="flex flex-wrap gap-1">
         <div className="relative flex size-full items-center justify-center overflow-hidden">
           <IconCloud images={images} />
         </div>
