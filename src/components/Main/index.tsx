@@ -29,7 +29,7 @@ const Main = () => {
                 </div>
                 <div className='image-profile'>
                     <BlurFade>
-                        <img src="./gabriel.jpg" alt="Sample 1" className='image' />
+                        <img src="./avatar.jpg" alt="Sample 1" className='image' />
                     </BlurFade>
                 </div>
             </div>
