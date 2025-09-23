@@ -45,3 +45,43 @@
     display: flex;
     flex-direction: column;
 }
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .main-info {
+        order: 2; /* Move o terminal para baixo */
+        align-items: center;
+    }
+
+    .image-profile {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%; /* Formato circular */
+        margin-top: 2.8rem;
+        order: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    .terminal {
+      width: 100%;
+
+    }
+
+    .terminal code {
+      text-align: start;
+    }
+}

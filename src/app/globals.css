@@ -1,3 +1,4 @@
+/* src/app/globals.css */
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -168,12 +169,17 @@ body {
   background-color: rgb(241, 241, 241);
 }
 
+.main-page-container {
+    min-height: 100vh;
+    padding-bottom: 2rem;
+}
+
 .particles-grid-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Ensure it's behind other content */
-    overflow: hidden; /* Prevent scrollbars */
+    z-index: -1;
+    overflow: hidden;
 }
