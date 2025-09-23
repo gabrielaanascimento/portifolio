@@ -1,6 +1,8 @@
+// src/app/projects/page.tsx
 "use client"
 import { getAbout } from '@/services/about';
 import { allProjects } from '@/services/allProjects';
+import CtaSection from '@/components/CtaSection'; // Importe o novo componente
 import React from 'react'
 
 export default function ProjectsPage() {
@@ -54,13 +56,15 @@ export default function ProjectsPage() {
           ))}
         </section>
 
-        {/* CTA */}
-        <section style={{ border: "2px dashed #ccc", borderRadius: "12px", padding: "32px", textAlign: "center" }}>
-          <h3 style={{ fontSize: "20px", fontWeight: 600, marginBottom: "8px", color: '#000' }}>Gostou dos meus projetos?</h3>
-          <p style={{ fontSize: "14px", color: "#52525b", marginBottom: "16px" }}>Entre em contato e vamos discutir como posso ajudar no seu próximo desafio.</p>
-          <a href={`mailto:${email}`} style={{ padding: "10px 20px", borderRadius: "20px", background: "gray", color: "white", textDecoration: "none", marginRight: "12px" }}>Falar comigo</a>
-          <a href="/about" style={{ padding: "10px 20px", borderRadius: "20px", border: "1px solid gray", textDecoration: "none", color: "black" }}>Sobre mim</a>
-        </section>
+        {/* CTA REUTILIZÁVEL */}
+        <CtaSection
+          title="Gostou dos meus projetos?"
+          description="Entre em contato e vamos discutir como posso ajudar no seu próximo desafio."
+          primaryButtonText="Falar comigo"
+          primaryButtonLink={`mailto:${email}`}
+          secondaryButtonText="Sobre mim"
+          secondaryButtonLink="/about"
+        />
       </main>
     </div>
   );

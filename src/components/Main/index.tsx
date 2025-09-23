@@ -15,7 +15,6 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 
 const Main = () => {
     return (
-        <>
             <div className='main-container'>
                 <div className='main-info'>
                     <Terminal className="terminal">
@@ -27,13 +26,10 @@ const Main = () => {
                 </Terminal>
                 <RainbowButton className="button" onClick={() => window.location.href = '/about'}>Ver mais</RainbowButton>
                 </div>
-                <div className='image-profile'>
-                    <BlurFade>
-                        <img src="./avatar.jpg" alt="Sample 1" className='image' />
+                    <BlurFade className='image-profile'>
+                        <img src="./avatar.jpg" alt="Imagem do usuário" className='image' />
                     </BlurFade>
-                </div>
             </div>
-        </>
     )
 }
 

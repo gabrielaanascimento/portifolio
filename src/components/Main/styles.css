@@ -57,14 +57,14 @@
     .main-info {
         order: 2; /* Move o terminal para baixo */
         align-items: center;
+        
     }
 
     .image-profile {
         width: 160px;
         height: 160px;
         border-radius: 50%; /* Formato circular */
-        margin-top: 2.8rem;
-        order: 1;
+        margin-top: 3rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -77,11 +77,12 @@
     }
 
     .terminal {
-      width: 100%;
+      width: 80%;
 
     }
 
     .terminal code {
       text-align: start;
+      text-wrap: wrap;
     }
 }
